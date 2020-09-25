@@ -1,0 +1,193 @@
+h1 {
+padding-left: 40px;
+color: lightpink;
+font-family: Arial, Helvetica, sans-serif;
+text-transform: uppercase;
+}
+.container {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+}
+.todo-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.todo-list-item {
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.todo-list-text {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+.todo-list-input {
+    color: lightpink;
+    border: 0 solid lightpink;
+    flex-grow: 1;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height:50px;
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+}
+.todo-list-input:hover {
+    box-shadow: 0px 2px 6px rgba(253, 100, 113, 0.7);
+}
+.todo-list-input:focus{
+    outline: 0;
+}
+.form-flex {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.submit-button {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 120px;
+    height: 50px; 
+    border-radius: 10px;
+    border: 0 solid lightpink;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    font-size: 19px;
+    background-image: linear-gradient(lightpink, lightgray);
+    color: white;
+}
+.submit-button:hover {
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    color: lightpink;
+    cursor: pointer;
+}
+.submit-button:active {
+    border-width:0px;
+    border:none;
+    outline: 0;
+    background-color: lightgrey;
+    color: white;
+}
+.submit-button:focus{
+    outline: 0; 
+}
+/* Hide the browser's default checkbox */
+.todo-list-text input {
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+/* Create a custom checkbox */
+.checkmark {
+    z-index: 10;
+    position: absolute;
+    display: block;
+    top: -2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(250, 149, 174, 0.55);
+}
+.todo-list-text-item {
+    margin-left: 40px;
+}
+.checkmark-tick {
+    position: absolute;
+    display: none;
+    left: 2px;
+    top: -8px;
+    width: 12px;
+    height: 18px;
+    border: 2px solid pink;
+    border-width: 0 8px 8px 0;
+    transform: rotate(45deg);
+}
+
+/* On mouse-over, add the background color*/ 
+li:hover {
+    box-shadow: 0px 2px 6px rgba(253, 100, 113, 0.7);
+}
+.todo-list-text:hover .checkmark-tick {
+    display: block;
+ }
+ .hidden {
+    display: none;
+ }
+ .popap {
+    position: absolute;
+    z-index: 100;
+    margin: 0;
+    left: 15%;
+    top: 15%;
+    padding: 20px;
+    display: block;
+    width: 400px;
+    height: 120px; 
+    border-radius: 15px;  
+    border: 0 solid lightpink;
+    box-shadow: 10px 10px 100px rgba(54, 8, 8, 0.5);
+    background-color: rgb(233, 229, 229);
+    margin-left: 20px;
+    font-size: 19px;
+ }
+ .flex {
+     display: flex;
+     margin: 0;
+     justify-content: left;
+ }
+ .popap-button {
+    display: block;
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+    margin: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: lightpink;
+ }
+ .popap-button:hover {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-weight: bold;
+ }
+/* On mouse-over, add the background color  
+.todo-list-text:hover .checkmark {
+    background-image: linear-gradient(lightpink, lightgray);
+}
+/* Create the checkmark/indicator (hidden when not checked) 
+.checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked 
+.todo-list-text input:checked ~ .checkmark:after{
+    display: block;
+}
+/* Style the checkmark/indicator 
+.todo-list-text .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
