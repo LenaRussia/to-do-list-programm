@@ -165,29 +165,3 @@ li:hover {
     cursor: pointer;
     font-weight: bold;
  }
-/* On mouse-over, add the background color  
-.todo-list-text:hover .checkmark {
-    background-image: linear-gradient(lightpink, lightgray);
-}
-/* Create the checkmark/indicator (hidden when not checked) 
-.checkmark:after {
-    content: '';
-    position: absolute;
-    display: none;
-}
-/* Show the checkmark when checked 
-.todo-list-text input:checked ~ .checkmark:after{
-    display: block;
-}
-/* Style the checkmark/indicator 
-.todo-list-text .checkmark:after {
-    left: 7px;
-    top: 3px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 5px 5px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
