@@ -11,19 +11,22 @@ var newItemTemplate = taskTemplate.querySelector('.todo-list-item');
 var popap = document.querySelector('.hidden');
 var popapYes = popap.querySelector('.yes');
 var popapNo = popap.querySelector('.no');
-console.log(popapNo);
+var fon = document.querySelector('.hidden-fill');
 
 // delete item 
 var deleteItem = function(item) {
     var checkbox = item.querySelector('.todo-list-item input');
     checkbox.addEventListener('change', function() {
         popap.classList.add('popap');
+        fon.classList.add('fill');
         popapNo.addEventListener('click', function() {
             popap.classList.remove('popap');
+            fon.classList.remove('fill');
         })
         popapYes.addEventListener('click', function() {
             item.remove();
             popap.classList.remove('popap');
+            fon.classList.remove('fill');
         })  
     })
 }
